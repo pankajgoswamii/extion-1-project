@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media Platform – Privacy Settings</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="fade-in">
+      <div class="logo-container">
+        <img src="https://img.icons8.com/color/96/000000/share--v1.png" alt="Logo" class="logo" />
+        <h1 class="logo-text">MySocial</h1>
+      </div>
+      <p>Customize your privacy settings below</p>
+    </header>
+
+    <!-- Profile Privacy Settings -->
+    <section class="card fade-in">
+      <h2>👤 Profile Visibility</h2>
+      <select id="profilePrivacy">
+        <option value="public">Public</option>
+        <option value="friends">Friends Only</option>
+        <option value="private">Private</option>
+      </select>
+      <p class="info">Your profile is currently <span id="profileStatus">Public</span>.</p>
+    </section>
+
+    <!-- Post Creation with Privacy -->
+    <section class="card fade-in">
+      <h2>📝 Create a Post</h2>
+      <textarea id="postContent" placeholder="What's on your mind?"></textarea>
+      <label for="postPrivacy">Post Privacy:</label>
+      <select id="postPrivacy">
+        <option value="public">Public</option>
+        <option value="friends">Friends Only</option>
+        <option value="private">Only Me</option>
+      </select>
+      <button onclick="postMessage()">Post</button>
+    </section>
+
+    <!-- Simulated Feed -->
+    <section class="card fade-in" id="feed">
+      <h2>📰 Your Feed</h2>
+      <div id="posts"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
